@@ -119,4 +119,5 @@ if __name__ == '__main__':
     QSBot('ballistick1.xgenstudios.com', 1138)
     QSBot('ballistick3.xgenstudios.com', 1138)
     QSBot('ballistick2.xgenstudios.com', 1138)
+    QSBot('ballistick9.xgenstudios.com', 1138)
     QSBot('ballistick1.xgenstudios.com', 1139)
