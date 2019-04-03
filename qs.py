@@ -23,13 +23,13 @@ class QSBot:
             if Receive:
                 return Socket.recv(self.BufSize).decode('utf-8')
 
-    def startKeepAlive(self, TimerSeconds = 0.01):
+    def startKeepAlive(self, TimerSeconds = 0.1):
         if hasattr(self, 'SocketConn'):
             KeepAliveTimer = threading.Timer(TimerSeconds, self.startKeepAlive)
             KeepAliveTimer.daemon = True
             KeepAliveTimer.start()
 
-            self.sendPacket(self.SocketConn, '9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
+            self.sendPacket(self.SocketConn, '9%%%%%%%%%%%%<><<>><//')
             self.sendPacket(self.SocketConn, '0b100255000000')
             self.sendPacket(self.SocketConn, '01')
             self.sendPacket(self.SocketConn, '0b141255000000000000255')
