@@ -100,7 +100,7 @@ class QSBot:
         Handshake = self.sendPacket(self.SocketConn, '08HxO9TdCC62Nwln1P', True).strip(self.NullByte.decode('utf-8'))
 
         if Handshake == '08':
-            Packets = ['02B100!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%', '05mp=**']
+            Packets = ['02B100!%%%%%%%%%%', '05mp=**']
 
             for Packet in Packets:
                 self.sendPacket(self.SocketConn, Packet)
