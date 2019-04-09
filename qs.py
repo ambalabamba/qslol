@@ -99,8 +99,10 @@ class QSBot:
 
         Handshake = self.sendPacket(self.SocketConn, '08HxO9TdCC62Nwln1P', True).strip(self.NullByte.decode('utf-8'))
 
-        if Handshake == '08':
-            Packets = ['02B100!%%%%%%%%%%', '05mp=**']
+        if Handshake == '08'
+            02A00LOL;G
+            #02B100!lol
+            Packets = ['02A00!lol;G', '0k1']
 
             for Packet in Packets:
                 self.sendPacket(self.SocketConn, Packet)
@@ -114,10 +116,10 @@ class QSBot:
             print('Server capacity check failed.')
 
 if __name__ == '__main__':
-    QSBot('ballistick5.xgenstudios.com', 1138)
-    QSBot('ballistick4.xgenstudios.com', 1138)
-    QSBot('ballistick1.xgenstudios.com', 1138)
-    QSBot('ballistick3.xgenstudios.com', 1138)
-    QSBot('ballistick2.xgenstudios.com', 1138)
-    QSBot('ballistick9.xgenstudios.com', 1138)
-    QSBot('ballistick1.xgenstudios.com', 1139)
+    #QSBot('ballistick5.xgenstudios.com', 1138)
+    #QSBot('ballistick4.xgenstudios.com', 1138)
+    QSBot('ballistick1.xgenstudios.com', 1031)
+    #QSBot('ballistick3.xgenstudios.com', 1138)
+    #QSBot('ballistick2.xgenstudios.com', 1138)
+    #QSBot('ballistick9.xgenstudios.com', 1138)
+    #QSBot('ballistick1.xgenstudios.com', 1139)
