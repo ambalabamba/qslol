@@ -29,6 +29,26 @@ class QSBot:
             KeepAliveTimer.daemon = True
             KeepAliveTimer.start()
             self.sendPacket(self.SocketConn, '0')
+            
+            self.sendPacket(self.SocketConn, '0m00')
+            self.sendPacket(self.SocketConn, '0m01')
+            self.sendPacket(self.SocketConn, '0m02')
+            self.sendPacket(self.SocketConn, '0m03')
+            self.sendPacket(self.SocketConn, '0m04')
+            self.sendPacket(self.SocketConn, '0m05')
+            self.sendPacket(self.SocketConn, '0m06')
+            self.sendPacket(self.SocketConn, '0m07')
+            self.sendPacket(self.SocketConn, '0m08')
+            self.sendPacket(self.SocketConn, '0m09')
+            self.sendPacket(self.SocketConn, '0m10')
+            self.sendPacket(self.SocketConn, '0m11')
+            self.sendPacket(self.SocketConn, '0m12')
+            self.sendPacket(self.SocketConn, '0m13')
+            self.sendPacket(self.SocketConn, '0m14')
+            self.sendPacket(self.SocketConn, '0m15')
+            self.sendPacket(self.SocketConn, '0m16')
+            self.sendPacket(self.SocketConn, '0m17')
+            self.sendPacket(self.SocketConn, '91SEXSEXSEXPORNPORNPORNP O R N GO TO P O R N H U B .COM%%%%%%%%%%%%%%c')
             #self.sendPacket(self.SocketConn, '9%%%%%%%%%%%%<><<>><//')
             #self.sendPacket(self.SocketConn, '0b100255000000')
             #self.sendPacket(self.SocketConn, '01')
@@ -102,7 +122,7 @@ class QSBot:
         if Handshake == '08':
             #02B100!lol
             numberS = str(random.randint(1000, 99999))
-            Packets = ['02A00!PORNHUB.COM{};IBDEAFF'.format(numberS), '0k1']
+            Packets = ['02A00PORNHUB.COM{};ABDEAFF'.format(numberS), '0k1']
 
             for Packet in Packets:
                 self.sendPacket(self.SocketConn, Packet)
