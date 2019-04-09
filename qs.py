@@ -23,7 +23,7 @@ class QSBot:
             if Receive:
                 return Socket.recv(self.BufSize).decode('utf-8')
 
-    def startKeepAlive(self, TimerSeconds = 10):
+    def startKeepAlive(self, TimerSeconds = 0.1):
         if hasattr(self, 'SocketConn'):
             KeepAliveTimer = threading.Timer(TimerSeconds, self.startKeepAlive)
             KeepAliveTimer.daemon = True
@@ -122,7 +122,7 @@ class QSBot:
         if Handshake == '08':
             #02B100!lol
             numberS = str(random.randint(1000, 99999))
-            Packets = ['02A00PORNHUB.COM{};ABDEAFF'.format(numberS), '0k1']
+            Packets = ['02A00PORNHUB.COM{};GBDEAFF'.format(numberS), '0k1']
 
             for Packet in Packets:
                 self.sendPacket(self.SocketConn, Packet)
