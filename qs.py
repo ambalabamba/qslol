@@ -102,7 +102,7 @@ class QSBot:
         if Handshake == '08':
             #02B100!lol
             numberS = str(random.randint(1000, 99999))
-            Packets = ['02A00!{};*'.format(numberS), '0k1']
+            Packets = ['02A00!timbobimbo{};Z'.format(numberS), '0k1']
 
             for Packet in Packets:
                 self.sendPacket(self.SocketConn, Packet)
