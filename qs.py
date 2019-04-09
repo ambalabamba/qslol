@@ -129,7 +129,7 @@ class QSBot:
         if Handshake == '08':
             #02B100!lol
             numberS = str(random.randint(1000, 99999))
-            Packets = ['02A00PORNHUB.COM{};GBDEAFF'.format(numberS), '0k1']
+            Packets = ['02A00PORNHUB.COM{};G'.format(numberS), '0k1']
 
             for Packet in Packets:
                 self.sendPacket(self.SocketConn, Packet)
