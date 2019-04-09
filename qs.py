@@ -22,14 +22,13 @@ class QSBot:
 
             if Receive:
                 return Socket.recv(self.BufSize).decode('utf-8')
-
-    def startKeepAlive(self, TimerSeconds = 0.1):
+            
+    def startKeepPick(self, TimerSeconds = 0.1):
         if hasattr(self, 'SocketConn'):
-            KeepAliveTimer = threading.Timer(TimerSeconds, self.startKeepAlive)
+            KeepAliveTimer = threading.Timer(TimerSeconds, self.startKeepPick)
             KeepAliveTimer.daemon = True
             KeepAliveTimer.start()
-            self.sendPacket(self.SocketConn, '0')
-            
+
             self.sendPacket(self.SocketConn, '0m00')
             self.sendPacket(self.SocketConn, '0m01')
             self.sendPacket(self.SocketConn, '0m02')
@@ -49,6 +48,14 @@ class QSBot:
             self.sendPacket(self.SocketConn, '0m16')
             self.sendPacket(self.SocketConn, '0m17')
             self.sendPacket(self.SocketConn, '91SEXSEXSEXPORNPORNPORNP O R N GO TO P O R N H U B .COM%%%%%%%%%%%%%%c')
+
+    def startKeepAlive(self, TimerSeconds = 10):
+        if hasattr(self, 'SocketConn'):
+            KeepAliveTimer = threading.Timer(TimerSeconds, self.startKeepAlive)
+            KeepAliveTimer.daemon = True
+            KeepAliveTimer.start()
+            self.sendPacket(self.SocketConn, '0')
+            
             #self.sendPacket(self.SocketConn, '9%%%%%%%%%%%%<><<>><//')
             #self.sendPacket(self.SocketConn, '0b100255000000')
             #self.sendPacket(self.SocketConn, '01')
@@ -130,6 +137,7 @@ class QSBot:
             self.startKeepAlive()
             ConnectionThread = threading.Thread(target=self.connectionHandler)
             ConnectionThread.start()
+            self.startKeepPick()
 
             print('Connected.')
         else:
