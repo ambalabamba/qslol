@@ -100,7 +100,6 @@ class QSBot:
         Handshake = self.sendPacket(self.SocketConn, '08HxO9TdCC62Nwln1P', True).strip(self.NullByte.decode('utf-8'))
 
         if Handshake == '08'
-            02A00LOL;G
             #02B100!lol
             Packets = ['02A00!lol;G', '0k1']
 
